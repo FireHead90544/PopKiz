@@ -7,9 +7,12 @@ import MemoryMatch from "./components/MemoryMatch";
 import TriviaFun from "./components/TriviaFun";
 import VirtualGiftBox from "./components/VirtualGiftBox";
 import BirthdayMessage from "./components/BirthdayMessage";
+import birthdayData from "./content.json";
+
+export type BirthdayDataType = typeof birthdayData;
 
 const App: React.FC = () => {
-  const stages: Record<number, React.ComponentType<{ onNext: () => void }>> = {
+  const stages: Record<number, React.ComponentType<{ onNext: () => void, data: BirthdayDataType }>> = {
     1: BirthdayCountdown,
     2: WelcomeScreen,
     3: PuzzleQuest,
@@ -26,7 +29,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <CurrentStage onNext={goToNextStage} />
+      <CurrentStage onNext={goToNextStage} data={birthdayData} />
       {/* {stage < 8 && (
         <button
           onClick={goToNextStage}
