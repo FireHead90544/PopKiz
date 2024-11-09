@@ -1,13 +1,9 @@
 import React, { useState } from "react";
+import { BirthdayDataType } from "../App";
 
-// Add your images here
-const memories = [
-  { src: "https://via.placeholder.com/300", message: "Remember our first trip together?" },
-  { src: "https://via.placeholder.com/300", message: "The day we laughed so much!" },
-  { src: "https://via.placeholder.com/300", message: "Best friends forever, Pookie!" },
-];
+const MemoryLane: React.FC<{ onNext: () => void, data: BirthdayDataType }> = ({ onNext, data })  => {
+  const memories = data.memoryLane.memories;
 
-const MemoryLane: React.FC<{ onNext: () => void }> = ({ onNext })  => {
   const [currentMemory, setCurrentMemory] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
 
@@ -22,6 +18,9 @@ const MemoryLane: React.FC<{ onNext: () => void }> = ({ onNext })  => {
         <h2 className="text-2xl font-semibold text-pink-700 mb-4">
           Memory Lane
         </h2>
+        <p className="text-gray-700 mb-6">
+          Clicking on image does nothing. The More button is fake as well. Go sleep now.
+        </p>
         <div className="mb-6 relative">
           <img
             src={memories[currentMemory].src}
