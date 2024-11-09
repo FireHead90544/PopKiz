@@ -1,36 +1,9 @@
 import React, { useState } from "react";
+import { BirthdayDataType } from "../App";
 
-const questions = [
-  {
-    question: "What's my favorite food?",
-    options: ["Pizza", "Sushi", "Tacos", "Pasta"],
-    correctAnswer: "Pizza",
-    feedback: {
-      correct: "Yes! You know me well. 🍕",
-      incorrect: "Nope, you should know it's pizza! 🍕",
-    },
-  },
-  {
-    question: "Where have I hidden your gift? 😼",
-    options: ["Laptop", "Cloud storage", "Old Diary", "Under the bed"],
-    correctAnswer: "Old Diary",
-    feedback: {
-      correct: "Haha, you know! Hidden in plain sight. 📓",
-      incorrect: "Nope! Check the diary again. 😉",
-    },
-  },
-  {
-    question: "What's my favorite color?",
-    options: ["Blue", "Purple", "Green", "Red"],
-    correctAnswer: "Purple",
-    feedback: {
-      correct: "Correct! Purple is my color! 💜",
-      incorrect: "Wrong! Purple should be unforgettable. 💜",
-    },
-  },
-];
+const TriviaFun: React.FC<{ onNext: () => void, data: BirthdayDataType }> = ({ onNext, data}) => {
+  const questions = data.triviaFun.questions;
 
-const TriviaFun: React.FC<{ onNext: () => void }> = ({ onNext }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -96,7 +69,7 @@ const TriviaFun: React.FC<{ onNext: () => void }> = ({ onNext }) => {
               onClick={handleNextQuestion}
               className="bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition"
             >
-              {currentQuestion < questions.length - 1 ? "Next Question" : "Finish"}
+              {currentQuestion < questions.length - 1 ? "Next Question" : "Sleep Now?"}
             </button>
           </div>
         )}
