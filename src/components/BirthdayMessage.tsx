@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 
-const BirthdayMessage: React.FC<{ onNext: () => void }> = ({ onNext }) => {
+const BirthdayMessage: React.FC = () => {
+  const closeTab = () => {
+    window.opener = null;
+    window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4", "_self");
+    window.close();
+  }
+
   const [showConfetti, setShowConfetti] = useState(true);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
   // Update the window size state when the window is resized
   useEffect(() => {
+
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
@@ -22,10 +29,10 @@ const BirthdayMessage: React.FC<{ onNext: () => void }> = ({ onNext }) => {
   }, []);
 
   // Hide confetti after 5 seconds
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setShowConfetti(false), 5000);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => setShowConfetti(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 p-4">
@@ -44,10 +51,10 @@ const BirthdayMessage: React.FC<{ onNext: () => void }> = ({ onNext }) => {
           to you! 🥂
         </p>
         <button
-          onClick={onNext}
+          onClick={closeTab}
           className="bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition mt-4"
         >
-          Next
+          Close Tab
         </button>
       </div>
     </div>

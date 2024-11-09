@@ -7,7 +7,7 @@ const memories = [
   { src: "https://via.placeholder.com/300", message: "Best friends forever, Pookie!" },
 ];
 
-const MemoryLane: React.FC = () => {
+const MemoryLane: React.FC<{ onNext: () => void }> = ({ onNext })  => {
   const [currentMemory, setCurrentMemory] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
 
@@ -35,12 +35,20 @@ const MemoryLane: React.FC = () => {
             </div>
           )}
         </div>
-        <button
-          onClick={handleNext}
-          className="bg-pink-600 text-white py-2 px-4 rounded-lg text-lg hover:bg-pink-700 transition"
-        >
-          Next Memory
-        </button>
+        <div className="flex space-x-2 items-center justify-center">
+          <button
+            onClick={handleNext}
+            className="bg-pink-600 text-white py-2 px-4 rounded-lg text-lg hover:bg-pink-700 transition"
+          >
+            More
+          </button>
+          <button
+            className="bg-purple-600 text-white py-2 px-4 rounded-lg text-lg hover:bg-purple-700 transition"
+            onClick={() => onNext()}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
