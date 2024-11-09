@@ -39,5 +39,36 @@
             "https://placehold.co/400?text=5",
             "https://placehold.co/400?text=Boom"
         ]
+    },
+    "triviaFun": {
+        "questions": [
+            {
+              "question": "What's my favorite food?",
+              "options": ["Pizza", "Sushi", "Tacos", "Pasta"],
+              "correctAnswer": "Pizza",
+              "feedback": {
+                "correct": "Yes! You know me well. 🍕",
+                "incorrect": "Nope, you should know it's pizza! 🍕"
+              }
+            },
+            {
+              "question": "Where have I hidden your gift? 😼",
+              "options": ["Laptop", "Cloud storage", "Old Diary", "Under the bed"],
+              "correctAnswer": "Old Diary",
+              "feedback": {
+                "correct": "Haha, you know! Hidden in plain sight. 📓",
+                "incorrect": "Nope! Check the diary again. 😉"
+              }
+            },
+            {
+              "question": "What's my favorite color?",
+              "options": ["Blue", "Purple", "Green", "Red"],
+              "correctAnswer": "Purple",
+              "feedback": {
+                "correct": "Correct! Purple is my color! 💜",
+                "incorrect": "Wrong! Purple should be unforgettable. 💜"
+              }
+            }
+          ]
     }
 }
