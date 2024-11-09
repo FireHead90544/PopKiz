@@ -1,13 +1,23 @@
 {
+    "name": "Kunika",
+    "nickname": "Kizzy",
     "birthdayCountdown": {
         "timer": 5,
         "messages": [
             "Eh? What happened?",
-            "You still here?",
             "What you here for?",
-            "Ugh.. Fine..",
-            "Enable audio and turn up the volume..",
-            "Brace for the impact!"
+            "You still here?",
+            "Ugh.. fine.. enable the audio.",
+            "Turn up the volume.",
+            "Now, brace for the impact!"
+        ]
+    },
+    "welcomeScreen": {
+        "messages": [
+            ["So you got here? Sleep now.", "I won't"],
+            ["Behave ☝️😾", "Nuh uh"],
+            ["I said sleep 😾", "Nope"],
+            ["You never listen.. fine, go ahead", "Yayyy"]
         ]
     }
 }
