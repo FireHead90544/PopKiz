@@ -10,12 +10,14 @@ const PuzzleQuest: React.FC<{ onNext: () => void }> = ({ onNext }) => {
   useEffect(() => {
     setTiles(shuffle([...initialTiles]));
     setIsShuffled(true); // Set to true once shuffled
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     if (isShuffled) {
       checkSolved();
     }
+    // eslint-disable-next-line
   }, [tiles, isShuffled]);
 
   // Shuffle function
