@@ -29,5 +29,15 @@
             {"src": "https://via.placeholder.com/300", "message": "Some more message here!"},
             {"src": "https://via.placeholder.com/300", "message": "Yet another message here heh!"}
         ]
+    },
+    "memoryMatch": {
+        "cards": [
+            "https://placehold.co/400?text=Hello+World",
+            "https://placehold.co/400?text=2",
+            "https://placehold.co/400?text=3",
+            "https://placehold.co/400?text=4",
+            "https://placehold.co/400?text=5",
+            "https://placehold.co/400?text=Boom"
+        ]
     }
 }
