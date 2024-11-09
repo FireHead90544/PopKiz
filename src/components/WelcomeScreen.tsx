@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { BirthdayDataType } from "../App";
 
 const WelcomeScreen: React.FC<{ onNext: () => void, data: BirthdayDataType }> = ({ onNext , data }) => {
-  const [clicks, setClicks] = useState(0);
   const messages = data.welcomeScreen.messages;
+  
+  const [clicks, setClicks] = useState(0);
 
   const handleClick = () => {
     setClicks(clicks + 1);
