@@ -19,5 +19,8 @@
             ["I said sleep 😾", "Nope"],
             ["You never listen.. fine, go ahead", "Yayyy"]
         ]
+    },
+    "puzzleQuest": {
+        "skipPassword": "*pats*"
     }
 }
