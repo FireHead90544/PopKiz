@@ -22,5 +22,12 @@
     },
     "puzzleQuest": {
         "skipPassword": "*pats*"
+    },
+    "memoryLane": {
+        "memories": [
+            {"src": "https://via.placeholder.com/300", "message": "Some Message here"},
+            {"src": "https://via.placeholder.com/300", "message": "Some more message here!"},
+            {"src": "https://via.placeholder.com/300", "message": "Yet another message here heh!"}
+        ]
     }
 }
