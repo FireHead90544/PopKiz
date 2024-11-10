@@ -14,7 +14,7 @@ A stage-based react-app to wish your favourite ones a happy birthday with a twis
 
 ## Configuration
 
-I'll update it once it reaches towards it's completion.
+Edit `src/content.json` to customize everything from name to messages to images. A sample template has been provided. Once done, the static build can be generated using `npm run build` which can be served directly using gh-pages or any other static hosting.
 
 ## Deployment
 
