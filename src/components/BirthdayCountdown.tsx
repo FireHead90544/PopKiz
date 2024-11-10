@@ -7,6 +7,7 @@ const BirthdayCountdown: React.FC<{ onNext: () => void, data: BirthdayDataType }
 
   const [timeLeft, setTimeLeft] = useState(countdownTime);
   const [loadingMessage, setLoadingMessage] = useState(loadingMessages[0]);
+  const [isCountdownFinished, setIsCountdownFinished] = useState(false);
   
   const [audio] = useState(() => {
     const audioElement = new Audio("/happy-birthday.mp3");
@@ -21,6 +22,7 @@ const BirthdayCountdown: React.FC<{ onNext: () => void, data: BirthdayDataType }
       setTimeLeft((prevTime) => {
         if (prevTime > 1) return prevTime - 1;
         clearInterval(timerInterval);
+        setIsCountdownFinished(true);
         return 0;
       });
     }, 1000);
@@ -40,19 +42,30 @@ const BirthdayCountdown: React.FC<{ onNext: () => void, data: BirthdayDataType }
     // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    if (timeLeft === 0) {
-      audio.play();
-      onNext();
-    }
-  }, [timeLeft, audio, onNext]);
+  const handlePlayAudioAndNext = () => {
+    audio.play();
+    onNext();
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-center">
       <div className="max-w-lg w-full bg-white rounded-lg shadow-md p-6">
         <h2 className="text-3xl font-bold text-purple-700 mb-4">Mhmmm.. Go Away 😾</h2>
-        <p className="text-2xl text-gray-800 font-semibold mb-6">{timeLeft}s</p>
-        <p className="text-lg font-semibold text-gray-600 mb-6">{loadingMessage}</p>
+        {!isCountdownFinished && (
+          <>
+            <p className="text-2xl text-gray-800 font-semibold mb-6">{timeLeft}s</p>
+            <p className="text-lg font-semibold text-gray-600 mb-6">{loadingMessage}</p>
+          </>
+        )}
+        
+        {isCountdownFinished && (
+          <button
+            onClick={handlePlayAudioAndNext}
+            className="bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition mt-4"
+          >
+            Ok Bye 🎶
+          </button>
+        )}
       </div>
     </div>
   );
