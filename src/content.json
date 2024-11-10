@@ -1,0 +1,94 @@
+{
+    "name": "AsteroidDestroyer",
+    "nickname": "Megatron",
+    "birthdayCountdown": {
+        "timer": 30,
+        "messages": [
+            "Eh? What happened?",
+            "What you here for?",
+            "You still here?",
+            "Ugh.. fine.. enable the audio.",
+            "Turn up the volume.",
+            "Now, brace for the impact!"
+        ]
+    },
+    "welcomeScreen": {
+        "messages": [
+            ["So you got here? Sleep now.", "I won't"],
+            ["Behave ☝️😾", "Nuh uh"],
+            ["I said sleep 😾", "Nope"],
+            ["You never listen.. fine, go ahead", "Yayyy"]
+        ]
+    },
+    "puzzleQuest": {
+        "skipPassword": "megatroniscool"
+    },
+    "memoryLane": {
+        "memories": [
+            {"src": "https://via.placeholder.com/300", "message": "Some message regarding that memory"},
+            {"src": "https://via.placeholder.com/300", "message": "How about some more?"},
+            {"src": "https://via.placeholder.com/300", "message": "Yet another one here!"}
+        ]
+    },
+    "memoryMatch": {
+        "cards": [
+            "https://placehold.co/400?text=1",
+            "https://placehold.co/400?text=2",
+            "https://placehold.co/400?text=3",
+            "https://placehold.co/400?text=4",
+            "https://placehold.co/400?text=5",
+            "https://placehold.co/400?text=6"
+        ]
+    },
+    "triviaFun": {
+        "questions": [
+            {
+              "question": "What's my favorite food?",
+              "options": ["Pizza", "Sushi", "Tacos", "Pasta"],
+              "correctAnswer": "Pizza",
+              "feedback": {
+                "correct": "Yes! You know me well. 🍕",
+                "incorrect": "Nope, you should know it's pizza! 🍕"
+              }
+            },
+            {
+              "question": "Where have I hidden your gift? 😼",
+              "options": ["Laptop", "Cloud storage", "Old Diary", "Under the bed"],
+              "correctAnswer": "Old Diary",
+              "feedback": {
+                "correct": "Haha, you know! Hidden in plain sight. 📓",
+                "incorrect": "Nope! Check the diary again. 😉"
+              }
+            },
+            {
+              "question": "What's my favorite color?",
+              "options": ["Blue", "Purple", "Green", "Red"],
+              "correctAnswer": "Purple",
+              "feedback": {
+                "correct": "Correct! Purple is my color! 💜",
+                "incorrect": "Wrong! Purple should be unforgettable. 💜"
+              }
+            }
+          ]
+    },
+    "virtualGiftBox": {
+        "subtleForeshadowing": [
+            "...",
+            "hmm.. wut?",
+            "shut up",
+            "nope",
+            "go away",
+            "sleep",
+            "*tch tch* 😾☝️",
+            "meow",
+            "ugh, fine..",
+            ""
+        ],
+        "image": "https://placehold.co/400?text=Birthday+Gift",
+        "message": "Put your message regarding gift here! 🎈 If you can, that is 😾"
+    },
+    "birthdayMessage": {
+        "userImage": "https://placehold.co/400?text=Asteroid+Destroyer",
+        "message": "May god blast you. Thank you for blasting, my amazing friend. Cheers to you! Enjoy your day, bruh 🥂"
+    }
+}
