@@ -1,6 +1,6 @@
 {
-    "name": "Kunika",
-    "nickname": "Kizzy",
+    "name": "AsteroidDestroyer",
+    "nickname": "Megatron",
     "birthdayCountdown": {
         "timer": 5,
         "messages": [
@@ -25,19 +25,19 @@
     },
     "memoryLane": {
         "memories": [
-            {"src": "https://via.placeholder.com/300", "message": "Some Message here"},
-            {"src": "https://via.placeholder.com/300", "message": "Some more message here!"},
-            {"src": "https://via.placeholder.com/300", "message": "Yet another message here heh!"}
+            {"src": "https://via.placeholder.com/300", "message": "Some message regarding that memory"},
+            {"src": "https://via.placeholder.com/300", "message": "How about some more?"},
+            {"src": "https://via.placeholder.com/300", "message": "Yet another one here!"}
         ]
     },
     "memoryMatch": {
         "cards": [
-            "https://placehold.co/400?text=Hello+World",
+            "https://placehold.co/400?text=1",
             "https://placehold.co/400?text=2",
             "https://placehold.co/400?text=3",
             "https://placehold.co/400?text=4",
             "https://placehold.co/400?text=5",
-            "https://placehold.co/400?text=Boom"
+            "https://placehold.co/400?text=6"
         ]
     },
     "triviaFun": {
@@ -70,5 +70,25 @@
               }
             }
           ]
+    },
+    "virtualGiftBox": {
+        "subtleForeshadowing": [
+            "...",
+            "hmm.. wut?",
+            "shut up",
+            "nope",
+            "go away",
+            "sleep",
+            "*tch tch* 😾☝️",
+            "meow",
+            "ugh, fine..",
+            ""
+        ],
+        "image": "https://placehold.co/400?text=Birthday+Gift",
+        "message": "Put your message regarding gift here! 🎈 If you can, that is 😾"
+    },
+    "birthdayMessage": {
+        "userImage": "https://placehold.co/400?text=Asteroid+Destroyer",
+        "message": "May god blast you. Thank you for blasting, my amazing friend. Cheers to you! Enjoy your day, bruh 🥂"
     }
 }
