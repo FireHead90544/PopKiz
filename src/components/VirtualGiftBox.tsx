@@ -4,11 +4,17 @@ import { BirthdayDataType } from "../App";
 
 const VirtualGiftBox: React.FC<{ onNext: () => void, data: BirthdayDataType }> = ({ onNext, data }) => {
   const messages = data.virtualGiftBox.subtleForeshadowing;
-
   const [isOpened, setIsOpened] = useState(false);
   const [clickCount, setClickCount] = useState(0);
   const [position, setPosition] = useState({ top: "50%", left: "50%" });
   const [showConfetti, setShowConfetti] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = data.virtualGiftBox.image;
+    image.onload = () => setImageLoaded(true);
+  }, [data.virtualGiftBox.image]);
 
   const handleBoxClick = () => {
     if (clickCount < messages.length - 1) {
@@ -43,11 +49,15 @@ const VirtualGiftBox: React.FC<{ onNext: () => void, data: BirthdayDataType }> =
           <p className="text-2xl font-semibold text-purple-700 mb-4">
             Surprise! 🎉
           </p>
-          <img
-            src={data.virtualGiftBox.image}
-            alt="Surprise Gift"
-            className="w-3/4 mx-auto h-auto rounded-lg mb-6 object-cover"
-          />
+          {imageLoaded ? (
+            <img
+              src={data.virtualGiftBox.image}
+              alt="Surprise Gift"
+              className="w-3/4 mx-auto h-auto rounded-lg mb-6 object-cover"
+            />
+          ) : (
+            <div className="w-3/4 mx-auto h-48 bg-gray-200 rounded-lg mb-6 animate-pulse"></div>
+          )}
           <p className="w-3/4 mx-auto text-gray-700 mb-6">
             {data.virtualGiftBox.message}
           </p>
