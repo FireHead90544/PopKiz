@@ -2,7 +2,7 @@
     "name": "AsteroidDestroyer",
     "nickname": "Megatron",
     "birthdayCountdown": {
-        "timer": 5,
+        "timer": 30,
         "messages": [
             "Eh? What happened?",
             "What you here for?",
@@ -21,7 +21,7 @@
         ]
     },
     "puzzleQuest": {
-        "skipPassword": "*pats*"
+        "skipPassword": "megatroniscool"
     },
     "memoryLane": {
         "memories": [
