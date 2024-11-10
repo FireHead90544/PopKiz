@@ -37,6 +37,7 @@ const BirthdayCountdown: React.FC<{ onNext: () => void, data: BirthdayDataType }
       clearInterval(timerInterval);
       clearInterval(messageInterval);
     };
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

@@ -18,6 +18,7 @@ const MemoryMatch: React.FC<{ onNext: () => void; data: BirthdayDataType }> = ({
   useEffect(() => {
     preloadImages();
     initializeCards();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const preloadImages = () => {
