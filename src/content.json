@@ -25,9 +25,9 @@
     },
     "memoryLane": {
         "memories": [
-            {"src": "https://via.placeholder.com/300", "message": "Some message regarding that memory"},
-            {"src": "https://via.placeholder.com/300", "message": "How about some more?"},
-            {"src": "https://via.placeholder.com/300", "message": "Yet another one here!"}
+            {"src": "https://placehold.co/300?text=Memory+1", "message": "Some message regarding that memory"},
+            {"src": "https://placehold.co/300?text=Memory+2", "message": "How about some more?"},
+            {"src": "https://placehold.co/300?text=Memory+3", "message": "Yet another one here!"}
         ]
     },
     "memoryMatch": {
