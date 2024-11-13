@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BirthdayDataType } from "../App";
 
 const MemoryLane: React.FC<{ onNext: () => void; data: BirthdayDataType }> = ({
@@ -9,6 +9,14 @@ const MemoryLane: React.FC<{ onNext: () => void; data: BirthdayDataType }> = ({
 
   const [currentMemory, setCurrentMemory] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
+
+  // Preload all memory images
+  useEffect(() => {
+    memories.forEach((memory) => {
+      const img = new Image();
+      img.src = memory.src;
+    });
+  }, [memories]);
 
   const handleNext = () => {
     setShowMessage(false);
@@ -25,19 +33,20 @@ const MemoryLane: React.FC<{ onNext: () => void; data: BirthdayDataType }> = ({
           Clicking on image does nothing. The "More" button is fake as well. Go
           sleep now.
         </p>
-        <div className="mb-8 relative rounded-lg overflow-hidden border-2 border-purple-300 shadow-lg">
-          <img
-            src={memories[currentMemory].src}
-            alt="Memory"
-            className="rounded-lg w-full cursor-pointer transition-transform duration-300 hover:scale-105"
-            onClick={() => setShowMessage(!showMessage)}
-          />
-          {showMessage && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white font-semibold text-lg p-4 rounded-lg">
-              {memories[currentMemory].message}
-            </div>
-          )}
-        </div>
+        <div className="mb-8 relative w-full h-56 sm:h-96 rounded-lg overflow-hidden border-2 border-purple-300 shadow-lg">
+  <img
+    src={memories[currentMemory].src}
+    alt="Memory"
+    className="w-full h-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+    onClick={() => setShowMessage(!showMessage)}
+  />
+  {showMessage && (
+    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white font-semibold text-lg p-4 rounded-lg">
+      {memories[currentMemory].message}
+    </div>
+  )}
+</div>
+
         <div className="flex space-x-4 items-center justify-center">
           <button
             onClick={handleNext}
