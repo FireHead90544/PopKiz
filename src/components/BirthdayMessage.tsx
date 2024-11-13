@@ -5,7 +5,10 @@ import { BirthdayDataType } from "../App";
 const BirthdayMessage: React.FC<{ data: BirthdayDataType }> = ({ data }) => {
   const closeTab = () => {
     window.opener = null;
-    window.open("https://shattereddisk.github.io/rickroll/rickroll.mp4", "_self");
+    window.open(
+      "https://shattereddisk.github.io/rickroll/rickroll.mp4",
+      "_self"
+    );
     window.close();
   };
 
@@ -31,8 +34,10 @@ const BirthdayMessage: React.FC<{ data: BirthdayDataType }> = ({ data }) => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 p-4">
-      {showConfetti && <Confetti width={windowSize.width} height={windowSize.height} />}
-      
+      {showConfetti && (
+        <Confetti width={windowSize.width} height={windowSize.height} />
+      )}
+
       <div className="max-w-lg w-full bg-white bg-opacity-90 rounded-2xl shadow-2xl p-6 text-center border-4 border-purple-300 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
         <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-6">
           Happy Birthday, {data.name}! <span className="text-white">🎉</span>

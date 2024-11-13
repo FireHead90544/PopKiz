@@ -34,18 +34,18 @@ const MemoryLane: React.FC<{ onNext: () => void; data: BirthdayDataType }> = ({
           sleep now.
         </p>
         <div className="mb-8 relative w-full h-56 sm:h-96 rounded-lg overflow-hidden border-2 border-purple-300 shadow-lg">
-  <img
-    src={memories[currentMemory].src}
-    alt="Memory"
-    className="w-full h-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
-    onClick={() => setShowMessage(!showMessage)}
-  />
-  {showMessage && (
-    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white font-semibold text-lg p-4 rounded-lg">
-      {memories[currentMemory].message}
-    </div>
-  )}
-</div>
+          <img
+            src={memories[currentMemory].src}
+            alt="Memory"
+            className="w-full h-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+            onClick={() => setShowMessage(!showMessage)}
+          />
+          {showMessage && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white font-semibold text-lg p-4 rounded-lg">
+              {memories[currentMemory].message}
+            </div>
+          )}
+        </div>
 
         <div className="flex space-x-4 items-center justify-center">
           <button

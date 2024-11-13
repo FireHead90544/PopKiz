@@ -41,7 +41,7 @@ const BirthdayCountdown: React.FC<{
       clearInterval(timerInterval);
       clearInterval(messageInterval);
     };
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
 
   const handlePlayAudioAndNext = () => {
