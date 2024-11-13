@@ -28,7 +28,7 @@ const App: React.FC = () => {
   const goToNextStage = () => setStage(stage + 1);
 
   return (
-    <div className="App">
+    <div className="App select-none">
       <CurrentStage onNext={goToNextStage} data={birthdayData} />
       {/* {stage < 8 && (
         <button
