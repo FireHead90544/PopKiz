@@ -45,7 +45,7 @@ const BirthdayMessage: React.FC<{ data: BirthdayDataType }> = ({ data }) => {
             className="w-2/3 mx-auto rounded-full shadow-lg mb-8 transform transition-transform hover:scale-105"
           />
         ) : (
-          <div className="w-2/3 mx-auto h-56 bg-gray-200 rounded-full mb-8 animate-pulse"></div>
+          <div className="w-2/3 mx-auto h-48 bg-gray-200 rounded-full mb-8 animate-pulse"></div>
         )}
 
         <p className="text-xl font-medium text-gray-800 mb-6 px-4">
