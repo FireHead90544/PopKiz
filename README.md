@@ -23,7 +23,7 @@ Edit `src/content.json` to customize everything from name to messages to images.
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-To deploy on `gh-pages`, update the `homepage` url in `package.json` and run `npm run deploy`, then configure [deployment settings](https://github.com/gitname/react-gh-pages?tab=readme-ov-file#8-configure-github-pages)
+To deploy on `gh-pages`, update the `homepage` url in `package.json` and run `npm run deploy`, then configure [deployment settings](https://github.com/gitname/react-gh-pages?tab=readme-ov-file#8-configure-github-pages) if needed.
 
 ## Inspiration
 
