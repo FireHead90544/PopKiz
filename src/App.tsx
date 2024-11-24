@@ -30,7 +30,7 @@ const App: React.FC = () => {
   return (
     <div className="App select-none">
       <CurrentStage onNext={goToNextStage} data={birthdayData} />
-      {/* {stage < 8 && (
+      {/* {stage < stages.length && (
         <button
           onClick={goToNextStage}
           className="fixed bottom-10 right-10 bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition"
