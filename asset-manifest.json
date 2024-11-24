@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/popkiz/static/css/main.85b7cfb8.css",
+    "main.js": "/popkiz/static/js/main.8f04a398.js",
+    "static/js/453.a4ec9570.chunk.js": "/popkiz/static/js/453.a4ec9570.chunk.js",
+    "index.html": "/popkiz/index.html",
+    "main.85b7cfb8.css.map": "/popkiz/static/css/main.85b7cfb8.css.map",
+    "main.8f04a398.js.map": "/popkiz/static/js/main.8f04a398.js.map",
+    "453.a4ec9570.chunk.js.map": "/popkiz/static/js/453.a4ec9570.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85b7cfb8.css",
+    "static/js/main.8f04a398.js"
+  ]
+}
