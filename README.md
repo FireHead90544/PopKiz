@@ -17,7 +17,7 @@ A live static demo can be found [here](https://firehead90544.github.io/PopKiz).
 
 ## Configuration
 
-Edit `src/content.json` to customize everything from name to messages to images. A sample template has been provided. Once done, the static build can be generated using `npm run build` which can be served directly using gh-pages or any other static hosting.
+Edit `src/content.json` to customize everything from name to messages to images. A sample template has been provided.
 
 ## Deployment
 
