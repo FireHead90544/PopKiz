@@ -20,6 +20,8 @@ Edit `src/content.json` to customize everything from name to messages to images.
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+To deploy on `gh-pages`, update the `homepage` url in `package.json` and run `npm run deploy`
+
 ## Inspiration
 
 Built this for my friend Kizzy's birthday, that's where it got the name xD (I suck at naming stuff lol).
