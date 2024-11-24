@@ -3,7 +3,7 @@
 A stage-based react-app to wish your favourite ones a happy birthday with a twist.
 
 ## Demo
-A live static demo can be found [here](https://firehead90544.github.io/PopKiz)
+A live static demo can be found [here](https://firehead90544.github.io/PopKiz).
 
 ## Installation
 
