@@ -13,7 +13,7 @@ const BirthdayCountdown: React.FC<{
   const [isCountdownFinished, setIsCountdownFinished] = useState(false);
 
   const [audio] = useState(() => {
-    const audioElement = new Audio("/PopKiz/happy-birthday.mp3");
+    const audioElement = new Audio("https://FireHead90544.github.io/PopKiz/happy-birthday.mp3");
     audioElement.preload = "auto";
     audioElement.loop = true;
     return audioElement;
